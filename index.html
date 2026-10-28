@@ -459,7 +459,7 @@
     }
 
     /* ==========================================
-       6. TESTIMONIALS (FICTIONAL)
+       6. TESTIMONIALS
        ========================================== */
     .testimonials-section {
       padding: 5rem 0;
@@ -491,6 +491,7 @@
       height: 50px;
       border-radius: 50%;
       object-fit: cover;
+      border: 2px solid var(--accent-gold);
     }
 
     .testi-user h4 {
@@ -787,46 +788,46 @@
     </div>
   </section>
 
-  <!-- 6. TESTIMONIALS (FICTIONAL ONLY) -->
+  <!-- 6. TESTIMONIALS -->
   <section id="testimonials" class="testimonials-section">
     <div class="container">
       <div class="menu-header">
         <span class="section-label">TESTIMONIALS</span>
-        <h2>What Our Early Testers Say</h2>
+        <h2>What Our Friends Say</h2>
       </div>
 
       <div class="testimonials-grid">
-        <!-- FICTIONAL USER 1 -->
+        <!-- TESTIMONIAL 1: Yuri Bro -->
         <div class="testi-card">
           <div class="testi-user">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Fictional Customer Profile Photo">
+            <img src="yuri.jpg" alt="Yuri Bro">
             <div>
-              <h4>Bea R.</h4>
-              <span>College Student</span>
+              <h4>Yuri Bro</h4>
+              <span>Early Tester & Coffee Lover</span>
             </div>
           </div>
           <p>"The Porthos Caramel Cloud is my new study buddy! Premium coffee quality without hurting a student's allowance."</p>
         </div>
 
-        <!-- FICTIONAL USER 2 -->
+        <!-- TESTIMONIAL 2: Baj Dapogi -->
         <div class="testi-card">
           <div class="testi-user">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Fictional Customer Profile Photo">
+            <img src="baj.jpg" alt="Baj Dapogi">
             <div>
-              <h4>Mark V.</h4>
-              <span>Young Professional</span>
+              <h4>Baj Dapogi</h4>
+              <span>Fellowship Member</span>
             </div>
           </div>
           <p>"Super fast service and authentic coffee flavor. Athos Espresso Cream gives me the exact jumpstart I need in the morning!"</p>
         </div>
 
-        <!-- FICTIONAL USER 3 -->
+        <!-- TESTIMONIAL 3: Howard Bro -->
         <div class="testi-card">
           <div class="testi-user">
-            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Fictional Customer Profile Photo">
+            <img src="howard.jpg" alt="Howard Bro">
             <div>
-              <h4>Clara M.</h4>
-              <span>Graphic Designer</span>
+              <h4>Howard Bro</h4>
+              <span>Coffee Enthusiast</span>
             </div>
           </div>
           <p>"Love their mission to support local farmers! The Aramis Matcha Cold Foam is super smooth and perfectly balanced."</p>
@@ -919,7 +920,6 @@
       e.preventDefault();
       let valid = true;
 
-      // Validate Name
       if (nameIn.value.trim() === '') {
         showErr(nameIn, nameErr);
         valid = false;
@@ -927,7 +927,6 @@
         clearErr(nameIn, nameErr);
       }
 
-      // Validate Email
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailPattern.test(emailIn.value.trim())) {
         showErr(emailIn, emailErr);
@@ -936,7 +935,6 @@
         clearErr(emailIn, emailErr);
       }
 
-      // Validate Consent
       if (!consentIn.checked) {
         consentErr.style.display = 'block';
         valid = false;
@@ -944,7 +942,6 @@
         consentErr.style.display = 'none';
       }
 
-      // Success Display
       if (valid) {
         successBox.style.display = 'block';
         form.reset();
